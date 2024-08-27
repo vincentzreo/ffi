@@ -10,3 +10,9 @@ export declare class Algo {
   hash(v: string): string
   getName(): string
 }
+export type JsMatrix = Matrix
+export declare class Matrix {
+  constructor(data: Array<Array<number>>)
+  multiply(other: unknown): this
+  display(): string
+}
