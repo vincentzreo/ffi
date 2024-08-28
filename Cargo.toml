@@ -1,5 +1,5 @@
 [workspace]
-members = ["node-binding", "algo"]
+members = ["node-binding", "algo", "python-binding"]
 resolver = "2"
 
 [workspace.dependencies]
