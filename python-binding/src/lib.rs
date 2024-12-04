@@ -1,4 +1,6 @@
+mod bitmap;
 mod hasher;
+mod matrix;
 use pyo3::prelude::*;
 
 /// Prints a message.
@@ -12,5 +14,7 @@ fn hello() -> PyResult<String> {
 fn _lowlevel(_py: Python, m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(hello, m)?)?;
     m.add_class::<hasher::PyAlgo>()?;
+    m.add_class::<matrix::PyMatrix>()?;
+    m.add_class::<bitmap::PyBitmap>()?;
     Ok(())
 }
